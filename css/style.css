@@ -1,0 +1,313 @@
+@charset "UTF-8"; /* 文字コードの指定 */
+
+/* Webフォントの指定 */
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Kosugi+Maru&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+/* ページ全体 */
+body {
+  font-family: "Noto Sans JP";
+}
+
+p {
+  font-size:  1.2vw;
+}
+.container {
+  width: 100%;
+}
+
+.title {
+  font-family: "Hachi Maru Pop";
+  font-size: 5vw;
+}
+
+.subtitle {
+  font-family: "Kosugi Maru";
+  font-size: 2vw;
+}
+
+/* ヘッダー */
+#header {
+  height: 50vw;
+  position: relative;
+  background-image: url("../img/mainvisual.png");
+  background-size: cover;
+}
+
+#header_title {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 17vw;
+  left: 0;
+}
+
+#header_subtitle {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 8vw;
+  left: 5vw;
+  color: #fff;
+}
+.heading {
+  width: 100%;
+  text-align: center;
+  padding: 2vw 0;
+}
+
+.subheading {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2vw;
+}
+
+/* ペットとくらすために大切なこと */
+#keep_pets {
+  background-color: #d1edfb;
+}
+
+#prepared_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.prepared_list_item {
+  width: 25vw;
+  text-align: center;
+  padding-bottom: 3vw;
+}
+
+.prepared_list_item .icon {
+  font-size: 5vw;
+  margin: 1vw 0;
+}
+
+/* 子犬の種類 */
+#puppies {
+  background-color: #f0faf2;
+  background-image: url("../img/puppies-bg.png");
+  background-repeat: repeat;
+}
+
+
+
+.pets_breeds {
+  padding: 0 10vw 3vw 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.pets_imgs_l,
+.pets_imgs_r {
+  width: 30%;
+}
+
+.pets_imgs_l img,
+.pets_imgs_r img {
+  width: 20vw;
+}
+
+.animate__animated {
+  opacity: 0;
+}
+
+.pets_description {
+  width: 70%;
+  text-align: left;
+}
+
+
+
+/* ギャラリー */
+#gallery {
+  background-image: linear-gradient(to bottom right, #f0faf2 0%, #f0faf2 50%, #fcecf5 50%, #fcecf5 100%);
+}
+
+.swiper {
+  width: 100%;
+}
+
+#gallery_navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw 0;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 40vw;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  color: #000;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 4.5vw;
+}
+
+.swiper-pagination {
+  position: relative;
+  width: 20vw;
+  font-size: 1.5vw;
+}
+/* お問い合わせ */
+#contact {
+  background-color: #fff;
+  text-align: center;
+}
+
+#contact p {
+  padding-bottom: 2vw;
+}
+
+#contact_form_area {
+  width: 80vw;
+  margin: 0 10vw;
+  padding: 1.5vw 5vw;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 2vw;
+}
+
+.form_column {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5vw 0;
+}
+
+.form_label {
+  width: 25vw;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form_input {
+  width: 45vw;
+}
+
+.required {
+  color: #f00;
+}
+
+.form_parts {
+  width: 100%;
+  height: 3.5vw;
+  padding: 0.5vw;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.form_textarea {
+  width: 100%;
+  height: 15vw;
+  padding: 0.5vw;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.form_parts::placeholder {
+  font-size: 1.5vw;
+}
+
+#form_submit {
+  padding-bottom: 2vw;
+}
+
+#form_has_error {
+  height: 4vw;
+  margin-top: 2vw;
+  color: #f00;
+  font-size: 2vw;
+}
+
+#submit_button {
+  padding: 1.5vw 5vw;
+  color: #fff;
+  background-color: #28a745;
+  font-size: 2.5vw;
+  border-radius: 5px;
+}
+/* フッター */
+#footer {
+  padding: 3vw 0;
+  background-color: #fafaf3;
+  text-align: center;
+}
+
+
+
+/* レスポンシブ（SP表示の指定） */
+@media (max-width: 767px) {
+  /* ヘッダー */
+  #header_title {
+    width: auto;
+    text-align: left;
+    top: 1vw;
+    left: 3vw;
+  }
+
+  #header_subtitle {
+    width: auto;
+    text-align: left;
+    top: 44vw;
+    left: 3vw;
+  }
+   /* ペットとくらすために大切なこと */
+  #prepared_list {
+    display: block;
+    width: 80vw;
+    margin-left: 10vw;
+  }
+
+  .prepared_list_item {
+    width: 100%;
+  }
+   /* 子犬の種類 */
+  .pets_breeds {
+    padding: 0 15vw 5vw 15vw;
+    display: block;
+  }
+
+  .pets_imgs_l,
+  .pets_imgs_r {
+    width: 70vw;
+    text-align: center;
+  }
+
+  .pets_description {
+    width: 70vw;
+  }
+  /* お問い合わせ */
+  .form_column {
+    display: block;
+  }
+
+  .form_input {
+    width: 100%;
+  }
+
+  .form_parts {
+    width: 100%;
+    height: 6vw;
+    padding: 0.5vw;
+    border-radius: 3px;
+  }
+}
